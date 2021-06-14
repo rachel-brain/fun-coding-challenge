@@ -1,24 +1,122 @@
-var startButton = document.querySelector("#start-button");
-var questionEl = document.querySelector(".question")
-var optionsEl = document.querySelector(".options")
-
+var timeEl = document.querySelector(".timer-box");
+var startBtn = document.getElementById("start-button");
+// var subtractTime= document.querySelector("subtract-time");
+var questionEl = document.querySelector(".question");
+var optionsBtns = document.querySelector(".options-button");
+var rulesCardEl = document.querySelector(".rules-card");
+var questionsCardEl = document.querySelector(".questions-card");
+var choiceResponseEl = document.querySelector("#response");
 
 
 // Order:
 // 1. Display the Rules of the game on load with the Start Button front & centre.
-// 2. The Timer is displayed on the top right of the page.
+// 2. The Timer - with a start time of 75 seconds - is displayed on the top right of the page.
 // 3. Once the user presses the Start button, the rules disappear & the first Question (chosen randomly) appears with 4 answer Options & the Timer begins its countdown.
 // 4. a) If the user chooses the correct option, they are given a message (word/color/sound) that they are correct.
 //    b) If the user chooses a wrong option, they are given a message (word/color/sound) that they are incorrect & 10 seconds will be removed from the time remaining.
 // 5. Then, the next Question (chosen randomly) appears with 4 answer Options & steps 4 & 5 are repeated.
 // 6. a) The Game ends either when there are no questions remaining & the user is told his/her score & is asked if they would like to record their score on the high scores page.
-//    b) Or the Game ends when the Timer reaches zero & the user is told they have failed/lost. 
+//    b) Or the Game ends when the Timer reaches zero & the user is told they have failed/lost/time is up. 
 // 7. Local storage will be needed to record the high scores on the high scores page & have them persist.
 
+// RESET TIMER TO 75 SECONDS!!!!!
+
+
+var time = 4;
+var interval = null;
+
+var startTimer = function () {
+    interval = setInterval(function () {
+        if (time > 0) {
+            time--;
+            timeEl.textContent = time;
+            console.log(time);
+        } else if (time === 0) {
+            // loseGame();
+            clearInterval(interval);
+            console.log("Time's up!");
+            timeEl.textContent = "Time's up!";
+        }
+    }, 1000);
+    startQuiz();
+};
+
+
+var quizQuestions;
+
+// var question;
+// var options;// var correctAnswer;
+
+// var optionsSplit = quizQuestions.options.split(",");
+
+var optionsBtnOne = document.querySelector(".one");
+var optionsBtnTwo = document.querySelector(".two");
+var optionsBtnThree = document.querySelector(".three");
+var optionsBtnFour = document.querySelector(".four");
+
+
+var shuffledQuestions;
+var currentQuestionIndex;
+var response;
+
+function startQuiz() {
+    rulesCardEl.classList.add("hide");
+    shuffledQuestions = quizQuestions.sort(() => Math.random() - .5);
+    currentQuestionIndex = 0;
+    questionsCardEl.classList.remove("hide");
+    setNextQuestion();
+}
+
+function setNextQuestion() {
+    showQuestion(shuffledQuestions[currentQuestionIndex]);
+}
+
+function showQuestion(quizQuestions) {
+    questionEl.innerText = quizQuestions.question;
+    quizQuestions.options.forEach(answer => {
+        // optionsBtns[0].innerText = quizQuestions.options[0];
+        // optionsBtns[1].innerText = quizQuestions.options[1];
+        // optionsBtns[2].innerText = quizQuestions.options[2];
+        // optionsBtns[3].innerText = quizQuestions.options[3];
+        // optionsBtns.one = quizQuestions.options[0].text;
+        // optionsBtns.two = quizQuestions.options[1].text;
+        // optionsBtns.three = quizQuestions.options[2].text;
+        // optionsBtns.four = quizQuestions.options[3].text;
+        // optionsBtns.innerText = quizQuestions.options.text;
+        // optionsBtns.innerText = quizQuestions.options; THIS ONE COCATENATES OPTIONS
+        optionsBtnsOne.innerText = quizQuestions.options[0];
+        optionsBtnsTwo.innerText = quizQuestions.options[1];
+        optionsBtnsThree.innerText = quizQuestions.options[2];
+        optionsBtnsFour.innerText = quizQuestions.options[3];
+
+        // optionsBtns.innerText = quizQuestions.optionsSplit;
+        if (answer === quizQuestions.correctAnswer) {
+            response = "Correct!";
+            choiceResponseEl.textContent = response;
+        } else {
+            response = "Wrong!";
+            choiceResponseEl.textContent = response;
+        };
+    });
+};
+
+optionsBtns.addEventListener("click", (event) => {
+    event.preventDefault();
+    currentQuestionIndex++;
+    console.log(currentQuestionIndex);
+    setNextQuestion();
+});
 
 
 
+// subtractTime.addEventListener("click", function () {
+//   timer -= 10; // or
+// timer = timer + 10;
+// });
 
+
+// var loseGame = function() {
+// }
 
 
 
@@ -73,3 +171,9 @@ quizQuestions = [{
         correctAnswer: "if (i==5)"
     }
 ];
+
+var init = function () {
+    startBtn.addEventListener("click", startTimer);
+}
+
+init();

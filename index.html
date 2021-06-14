@@ -14,31 +14,35 @@
 
 <body>
     <header>
+        <br>
+        <a href="scoresheet.html" target="_blank" id="link-button">Link to High Score Winners page</a>
+        <div class="timer-box">75</div>
         <h1>Fun Coding Quiz Challenge</h1>
     </header>
 
     <main>
         <div>
-            <div class="container">
-                <h2>Instructions for quiz</h2>
+            <div class="card">
                 <div class="rules-card">
+                    <h2>Instructions for quiz</h2>
                     <p>Test your JavaScript skills with this mini Coding Quiz Challenge. 10 questions only with a
-                        75-second
-                        time limit to keep you moving. Click on the box showing your chosen answer. Be careful - you
-                        will
-                        lose 10 seconds for every incorrect answer. At the end of the Quiz, your total score will be
-                        displayed and, if you achieve a high score, you will be invited to record your name on the high
-                        scores page & impress your friends.</p>
+                        75-second time limit to keep you moving. Click on the box showing your chosen answer. Be careful
+                        - you will lose 10 seconds for every incorrect answer. At the end of the Quiz, your total score
+                        will be displayed and, if you achieve a high score, you will be invited to record your name on
+                        the high scores page & impress your friends.</p>
                     <p>Good luck!</p>
                     <button id="start-button">Start</button>
                 </div>
-                <div class="questions-card">
+                <div class="questions-card hide">
+                    <p class="question">Question</p>
+                    <button class="options-button one">Option 1</button>
+                    <button class="options-button two">Option 2</button>
+                    <button class="options-button three">Option 3</button>
+                    <button class="options-button four">Option 4</button>
+                    <p id="response" class="hide"></p>
                 </div>
             </div>
         </div>
-
-
-
 
     </main>
     <script src="./assets/js/script.js"></script>

@@ -18,12 +18,21 @@
     </header>
 
     <main>
+        <div class="card">
+            <h3>Registered Winners:</h3>
+            <p><strong>Name:</strong> <span id="previous-winner"></span></p>
+            <p><strong>Score</strong> <span id="winner-score"></span></p>
 
-
-
-
+            <form method="POST">
+                <div class="scoreboard">
+                    <label for="initials">Name</label>
+                    <input type="text" name="name" id="your-name" placeholder="Name or initials here" />
+                    <button id="save">Save</button>
+                </div>
+            </form>
+        </div>
     </main>
-    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/scripths.js"></script>
 </body>
 
 </html>

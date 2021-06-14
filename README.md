@@ -2,6 +2,19 @@
 BOOTCAMP - Week 4 assignment
 
 
+## Process
+
+1. Display the Rules of the game on load with the Start Button front & centre.
+2. The Timer - with a start time of 75 seconds - is displayed on the top right of the page.
+3. Once the user presses the Start button, the rules disappear & the first Question (chosen randomly) appears with 4 answer Options & the Timer begins its countdown.
+4. a) If the user chooses the correct option, they are given a message (word/color/sound) that they are correct.
+   b) If the user chooses a wrong option, they are given a message (word/color/sound) that they are incorrect & 10 seconds will be removed from the time remaining.
+5. Then, the next Question (chosen randomly) appears with 4 answer Options & steps 4 & 5 are repeated.
+6. a) The Game ends either when there are no questions remaining & the user is told his/her score & is asked if they would like to record their score on the high scores page.
+   b) Or the Game ends when the Timer reaches zero & the user is told they have failed/lost/time is up.
+7. Local storage will be needed to record the high scores on the high scores page & have them persist.
+
+
 ## Your Task
 
 At some point in your journey to become a full-stack web developer, you’ll likely be asked to complete a coding assessment&mdash;perhaps as part of an interview process. A typical coding assessment includes both multiple-choice questions and interactive coding challenges. 
