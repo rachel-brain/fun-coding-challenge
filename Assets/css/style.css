@@ -103,14 +103,24 @@ p {
 .questions-card {
     padding: 2px 15px;
     margin: 10px;
-    height: 300px;
+    height: 600px;
+    align-content: center;
+    display: block;
+}
+
+.score-card {
+    padding: 2px 15px;
+    margin: 10px;
 }
 
 .hide {
     display: none;
 }
 
-.options-button {
+.options-button-one,
+.options-button-two,
+.options-button-three,
+.options-button-four {
     border-radius: 4px;
     border-style: none;
     box-shadow: 0 2px 2px 0 var(--black);
@@ -122,3 +132,20 @@ p {
     padding: 1em;
     margin: 20px;
 }
+
+#response,
+#zero-score {
+    color: var(--blue);
+    padding-top: 20px;
+    border-top: 2px solid var(--blue);
+    font-size: 1.2rem;
+}
+
+/* #final-score {} */
+
+/* .scoreboard {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+} */

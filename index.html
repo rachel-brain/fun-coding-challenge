@@ -35,15 +35,22 @@
                 </div>
                 <div class="questions-card hide">
                     <p class="question">Question</p>
-                    <button class="options-button one">Option 1</button>
-                    <button class="options-button two">Option 2</button>
-                    <button class="options-button three">Option 3</button>
-                    <button class="options-button four">Option 4</button>
+                    <button class="options-button-one option options-text" data-number="1">Option 1</button>
+                    <button class="options-button-two option options-text" data-number="2">Option 2</button>
+                    <button class="options-button-three option options-text" data-number="3">Option 3</button>
+                    <button class="options-button-four option options-text" data-number="4">Option 4</button>
                     <p id="response" class="hide"></p>
+                </div>
+                <div class="score-card hide">
+                    <p id="final-score">Congratulations! Your final score is ...</p>
+                    <button id="initials-button">Submit your name or initials here to be recorded on the
+                        Winners page</button>
+                </div>
+                <div class="loser-card hide">
+                    <p id="zero-score">Unfortunately, you ran out of time. Better luck next time!</p>
                 </div>
             </div>
         </div>
-
     </main>
     <script src="./assets/js/script.js"></script>
 </body>

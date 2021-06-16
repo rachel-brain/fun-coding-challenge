@@ -20,13 +20,16 @@
     <main>
         <div class="card">
             <h3>Registered Winners:</h3>
-            <p><strong>Name:</strong> <span id="previous-winner"></span></p>
-            <p><strong>Score</strong> <span id="winner-score"></span></p>
+            <!-- <p><strong>Name:</strong> <span id="previous-winner"></span></p>
+            <p><strong>Score</strong> <span id="winner-score"></span></p> -->
+            <p><strong>Name</strong> <span id="winner-name"></span><strong>...................... Score</strong>
+                <span id="winner-score"></span></p>
 
             <form method="POST">
                 <div class="scoreboard">
                     <label for="initials">Name</label>
-                    <input type="text" name="name" id="your-name" placeholder="Name or initials here" />
+                    <input type="text" name="name" id="your-initials" placeholder="Name or initials here" />
+                    <!-- <div> save score</div> -->
                     <button id="save">Save</button>
                 </div>
             </form>
