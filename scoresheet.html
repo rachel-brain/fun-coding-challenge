@@ -14,25 +14,29 @@
 
 <body>
     <header>
-        <h2>High scores</h2>
+        <h1>High scores</h1>
     </header>
 
     <main>
-        <div class="card">
-            <h3>Registered Winners:</h3>
-            <!-- <p><strong>Name:</strong> <span id="previous-winner"></span></p>
-            <p><strong>Score</strong> <span id="winner-score"></span></p> -->
-            <p><strong>Name</strong> <span id="winner-name"></span><strong>...................... Score</strong>
-                <span id="winner-score"></span></p>
+        <div class="scoreboard-card">
+            <h2>Winners Scoreboard</h2>
+            <p><strong>Name/Initials - - - - - - - -</strong> <span id="winner-name"></span><strong> - - - - - - High
+                    Score</strong> <span id="winner-score"></span></p>
+            <h3 class="message"></h3>
 
             <form method="POST">
-                <div class="scoreboard">
-                    <label for="initials">Name</label>
-                    <input type="text" name="name" id="your-initials" placeholder="Name or initials here" />
-                    <!-- <div> save score</div> -->
-                    <button id="save">Save</button>
+                <div class="winner-input">
+                    <label for="initials">Name or initials</label>
+                    <input type="text" name="name-initials" id="your-initials"
+                        placeholder="Your name or initials here" />
                 </div>
+                <div class="score-input">
+                    <label for="saved-score">Final score</label>
+                    <input type="text" name="score" id="final-score" placeholder="populated from local storage" />
+                </div>
+                <button id="enter">Enter</button>
             </form>
+            <ul id="winner-list"></ul>
         </div>
     </main>
     <script src="./assets/js/scripths.js"></script>
