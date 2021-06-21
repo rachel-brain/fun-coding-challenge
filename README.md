@@ -49,7 +49,7 @@ The main test run was to play the game to ensure that all all criteria were met;
  * the high score could be recorded
  * the high scores page would load with stored winners' initials/names & scores
  
- Unfortunately, at the time of publishing, the quiz was not working correctly for all criteria & further debugging is required.  In particular, although the correctAnswer was defined, the currentQuestionIndex sometimes added more than once & the penalty of a deduction of 10 seconds from the timer for an incorrect answer did not run.  Because of this, the game never ended with a positive score so the high scores page utilizing local storage could not be finalised.
+ Unfortunately, at the time of publishing, the quiz was not working correctly for all criteria & further debugging is required.  In particular, although the correctAnswer was defined, the currentQuestionIndex sometimes added more than one which meant that the player could never achieve a positive score & win the game.  Therefore, the high scores page utilizing local storage could not be finalised.
 
 ### URLs
 
