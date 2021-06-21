@@ -10,9 +10,9 @@ I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
 SO THAT I can gauge my progress compared to my peers
 ```
 
-## Process
+## Instructions for the Quiz
 
-1. Display the Rules of the game on load with the Start Button front & centre.
+1. Display the Rules of the game on load with the START Button front & centre.
 2. The Timer - with a start time of 75 seconds - is displayed on the top right of the page.
 3. Once the user presses the Start button, the rules disappear & the first Question (chosen randomly) appears with 4 answer Options & the Timer begins its countdown.
 4. a) If the user chooses the correct option, they are given a written message that the chosen answer was correct.
@@ -28,32 +28,6 @@ My motivation for undertaking this project was to practise using vanilla javascr
 ## Installation
 Open the (index.html) page in your prefered browser to see the rules page of the game & press the START butoon when ready to play.
 
-## Your Task
-
-At some point in your journey to become a full-stack web developer, you’ll likely be asked to complete a coding assessment&mdash;perhaps as part of an interview process. A typical coding assessment includes both multiple-choice questions and interactive coding challenges. 
-
-To help familiarize you with these tests and allow you to use the skills covered in this unit, this week’s homework invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. 
-
-This week’s coursework will equip you with all the skills you need to succeed in this assignment.
-
-
-
-## Acceptance Criteria
-
-```
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and my score
-```
-
 ## Mock-Up
 
 The following animation demonstrates the desired application functionality:
@@ -62,9 +36,7 @@ The following animation demonstrates the desired application functionality:
 
 ### Screenshot
 
-A screenshot of the webpage on a desktop monitor can be seen in the assets at (assets/images/screenshot-of-deployed-website.png).
-
-
+A screenshot of the webpage on a desktop monitor can be seen in the assets at (.assets/images/screenshot-of-deployed-quiz-website.JPG).
 
 ## License
 The MIT License has been applied which can be seen in the source file at (LICENSE.txt).
