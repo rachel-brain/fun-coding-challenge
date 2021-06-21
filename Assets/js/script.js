@@ -157,9 +157,6 @@ function setNextQuestion() {
     showQuestion(shuffledQuestions[currentQuestionIndex]);
 };
 
-var answer = quizQuestions.correctAnswer;
-var userInput;
-
 function showQuestion(quizQuestions) {
     questionEl.innerText = quizQuestions.question;
     optionOneEl.innerText = quizQuestions.option1;
@@ -176,6 +173,8 @@ function showQuestion(quizQuestions) {
 };
 
 var optionsBtns = document.querySelectorAll("button.option");
+var answer = quizQuestions.correctAnswer;
+var userInput;
 
 function checkAnswer(answer, userInput) {
     optionsBtns.forEach(function (i) {
@@ -190,7 +189,8 @@ function checkAnswer(answer, userInput) {
             answerNumber.innerhtml = quizQuestions.correctAnswer;
 
             // };
-            if (answer === userInput) {
+            if (answer == userInput) {
+                // if (answer === userInput) {
                 response = "Correct!";
                 choiceResponseEl.classList.remove("hide");
                 choiceResponseEl.textContent = response;
@@ -210,7 +210,8 @@ function checkAnswer(answer, userInput) {
 };
 
 function subtractTime() {
-    if (answer !== userInput && time > 10) {
+    // if (answer !== userInput && time > 10) {
+    if (answer != userInput && time > 10) {
         time = time - 10;
         timeEl.textContent = time;
         console.log(time);
