@@ -47,18 +47,18 @@ The main test run was to play the game to ensure that all all criteria were met;
  * all 10 questions were presented
  * the timer was working correctly
  * the high score could be recorded
- * the high scores page would load with stored winners'initials/names & scores
+ * the high scores page would load with stored winners' initials/names & scores
  
- Unfortunately, at the time of publishing, the game/local storage was not working correctly for all criteria & further debugging is required.  In particular, the ......
+ Unfortunately, at the time of publishing, the quiz was not working correctly for all criteria & further debugging is required.  In particular, although the correctAnswer was defined, the currentQuestionIndex sometimes added more than once & the penalty of a deduction of 10 seconds from the timer for an incorrect answer did not run.  Because of this, the game never ended with a positive score so the high scores page utilizing local storage could not be finalised.
 
 ### URLs
 
-* The URLs of the functional, deployed applications:
+* The URLs of the deployed applications are:
 
    https://rachel-brain.github.io/fun-coding-challenge/
 
    https://rachel-brain.github.io/fun-coding-challenge/scoresheet.html
 
-* The URL of the GitHub repository:
+* The URL of the GitHub repository is:
 
    https://github.com/rachel-brain/fun-coding-challenge
